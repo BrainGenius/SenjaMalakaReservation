@@ -27,8 +27,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="80dp"
+        android:background="@drawable/roundedcorners_mainmenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="@drawable/menu_pemesanan"/>
 
         <ImageButton
             android:id="@+id/ButtonMenu_SewaFotografer"
@@ -53,7 +53,7 @@
             app:layout_constraintStart_toEndOf="@+id/ButtonMenu_Pemesanan"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="@drawable/menu_sewafotografer" />
 
         <ImageButton
             android:id="@+id/ButtonMenu_SewaLiveMusic"
@@ -64,7 +64,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="@drawable/menu_sewalivemusic" />
 
         <ImageButton
             android:id="@+id/ButtonMenu_SewaBeanBag"
@@ -75,7 +75,7 @@
             app:layout_constraintStart_toEndOf="@+id/ButtonMenu_SewaLiveMusic"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="@drawable/menu_sewabeanbag" />
 
         <ImageButton
             android:id="@+id/ButtonMenu_UpdateEvent"
@@ -86,6 +86,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="@drawable/menu_updateevent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.SenjaMalaka.senjamalakareservation
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,10 +23,42 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        var menu = 0
+
         supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_PemesananFragment()).commit()
 
         binding.ButtonMenuPemesanan.setOnClickListener{
+            menu = 1
             supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_PemesananFragment()).commit()
         }
+        binding.ButtonMenuSewaFotografer.setOnClickListener{
+            menu = 2
+            supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_SewaFotograferFragment()).commit()
+        }
+        binding.ButtonMenuSewaLiveMusic.setOnClickListener{
+            menu = 3
+            supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_SewaLiveMusicFragment()).commit()
+        }
+        binding.ButtonMenuSewaBeanBag.setOnClickListener{
+            menu = 4
+            supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_SewaBeanBagFragment()).commit()
+        }
+        binding.ButtonMenuUpdateEvent.setOnClickListener{
+            menu = 5
+            supportFragmentManager.beginTransaction().replace(R.id.Menu_Fragment, Menu_UpdateEventFragment()).commit()
+        }
+
+        onBackPressedDispatcher.addCallback(object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (menu != 1)
+                {
+                    binding.ButtonMenuPemesanan.performClick()
+                }
+
+                else {
+                    finishAffinity()
+                }
+            }
+        })
     }
 }
