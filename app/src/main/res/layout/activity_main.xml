@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/Menu_Pemesanan"
+            android:id="@+id/ButtonMenu_Pemesanan"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
@@ -45,18 +45,18 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/Menu_SewaFotografer"
+            android:id="@+id/ButtonMenu_SewaFotografer"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Menu_SewaLiveMusic"
-            app:layout_constraintStart_toEndOf="@+id/Menu_Pemesanan"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonMenu_SewaLiveMusic"
+            app:layout_constraintStart_toEndOf="@+id/ButtonMenu_Pemesanan"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/Menu_SewaLiveMusic"
+            android:id="@+id/ButtonMenu_SewaLiveMusic"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -67,18 +67,18 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/Menu_SewaBeanBag"
+            android:id="@+id/ButtonMenu_SewaBeanBag"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Menu_UpdateEvent"
-            app:layout_constraintStart_toEndOf="@+id/Menu_SewaLiveMusic"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonMenu_UpdateEvent"
+            app:layout_constraintStart_toEndOf="@+id/ButtonMenu_SewaLiveMusic"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/Menu_UpdateEvent"
+            android:id="@+id/ButtonMenu_UpdateEvent"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="20dp"
