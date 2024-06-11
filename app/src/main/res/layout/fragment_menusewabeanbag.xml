@@ -43,7 +43,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Price :"/>
+            android:text="Size& Price :"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Small =Rp.75.000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Medium = Rp.100.000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Large= Rp.150.000"
 
         <RadioButton
             android:id="@+id/shapeSquare"
@@ -54,6 +66,22 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/beanbag_oval"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Size & Price :"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Small =Rp.85.000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Medium = Rp.95.000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Large= Rp.140.000"
 
         <RadioButton
             android:id="@+id/shapeOval"
@@ -64,39 +92,25 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/beanbag_triangle"/>
-
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Material:"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:id="@+id/materialRadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RadioButton
-            android:id="@+id/materialLeather"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Leather" />
-
-        <RadioButton
-            android:id="@+id/materialCotton"
-            android:layout_width="wrap_content"
+            android:text="Size& Price :"/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cotton" />
-
-        <RadioButton
-            android:id="@+id/materialPolyester"
-            android:layout_width="wrap_content"
+            android:text="- Size Small =Rp.75.000"/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Polyester" />
+            android:text="- Size Medium = Rp.100.000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Size Large= Rp.150.000"
+
+
+
     </RadioGroup>
 
     <Button
