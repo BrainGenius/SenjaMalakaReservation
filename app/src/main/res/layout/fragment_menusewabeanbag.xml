@@ -11,15 +11,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Katalog Beanbag "
+        android:text="KATALOG BEANBAG "
         android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:padding="16dp" />
+        android:padding="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="0dp"
         android:textSize="16sp" />
 
     <RadioGroup
@@ -27,8 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-
 
         <RadioButton
             android:id="@+id/shapeRound"
@@ -99,15 +98,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Size Small =Rp.75.000"/>
+            android:text="- Size Small =Rp.90.000"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Size Medium = Rp.100.000" />
+            android:text="- Size Medium = Rp.125.000" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Size Large= Rp.150.000"
+            android:text="- Size Large= Rp.175.000"
 
 
 
