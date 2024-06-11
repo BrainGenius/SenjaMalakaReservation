@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <RadioGroup
+        
         android:id="@+id/radioGroupFotografer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,13 +44,56 @@
         android:inputType="number" />
 
     <TextView
+        android:id="@+id/cameraTypeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Kamera:"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/cameraTypeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_dslr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DSLR"/>
+
+        <RadioButton
+            android:id="@+id/radio_mirrorless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mirrorless"/>
+
+        <RadioButton
+            android:id="@+id/radio_action_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Action Camera"/>
+
+        <RadioButton
+            android:id="@+id/radio_drone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drone"/>
+
+        <RadioButton
+            android:id="@+id/radio_instant_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instant Camera"/>
+
+    <TextView
         android:id="@+id/tvBiaya"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_below="@id/tvDurasi"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Total Biaya: "
+        android:text="Total Biaya : "
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -64,7 +108,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
@@ -80,6 +124,7 @@
             android:text="Batal" />
 
 
+
     </LinearLayout>
 
     <TextView
@@ -90,6 +135,9 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+
+    </RadioGroup>
 
 
 </LinearLayout>
