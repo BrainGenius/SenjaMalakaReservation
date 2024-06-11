@@ -4,11 +4,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etNamaFotografer"
-        android:layout_width="385dp"
+    <RadioGroup
+        android:id="@+id/radioGroupFotografer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Fotografer" />
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonFotografer1"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:text="Fotografer 1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFotografer2"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:text="Fotografer 2" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFotografer3"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:text="Fotografer 3" />
+
+        <!-- Tambahkan RadioButton sesuai dengan jumlah fotografer yang tersedia -->
+
+    </RadioGroup>
+
 
     <EditText
         android:id="@+id/etTanggal"
@@ -49,5 +72,6 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
+
 
 </LinearLayout>
