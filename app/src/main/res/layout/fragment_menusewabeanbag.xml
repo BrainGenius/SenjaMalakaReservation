@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_SewaBeanBagFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Sewa Bean Bag" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Beanbag Shape and Material"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Shape:"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/shapeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/shapeRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round" />
+
+        <RadioButton
+            android:id="@+id/shapeSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+
+        <RadioButton
+            android:id="@+id/shapeOval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oval" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Material:"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/materialRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/materialLeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leather" />
+
+        <RadioButton
+            android:id="@+id/materialCotton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cotton" />
+
+        <RadioButton
+            android:id="@+id/materialPolyester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Polyester" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/rentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rent Beanbag"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp" />
+</LinearLayout>
