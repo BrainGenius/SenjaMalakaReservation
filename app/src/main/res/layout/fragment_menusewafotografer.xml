@@ -14,21 +14,17 @@
             android:id="@+id/radioButtonFotografer1"
             android:layout_width="372dp"
             android:layout_height="wrap_content"
-            android:text="Fotografer 1" />
+            android:text="Fotografer 1 High" />
 
         <RadioButton
             android:id="@+id/radioButtonFotografer2"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
-            android:text="Fotografer 2" />
+            android:text="Fotografer 2 Medium" />
 
-        <RadioButton
-            android:id="@+id/radioButtonFotografer3"
-            android:layout_width="372dp"
-            android:layout_height="wrap_content"
-            android:text="Fotografer 3" />
 
-        <!-- Tambahkan RadioButton sesuai dengan jumlah fotografer yang tersedia -->
+
+
 
     </RadioGroup>
 
