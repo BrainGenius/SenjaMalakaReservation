@@ -33,7 +33,8 @@
             android:id="@+id/shapeRound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BEANBAG KUBUS" />
+            android:text="BEANBAG KUBUS"
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="100dp"
@@ -42,7 +43,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size& Price :"/>
+            android:text="Size& Price :"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +62,8 @@
             android:id="@+id/shapeSquare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BEANBAG OVAL" />
+            android:text="BEANBAG OVAL"
+            android:textStyle="bold"/>
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -68,7 +71,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size & Price :"/>
+            android:text="Size & Price :"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,7 +98,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size& Price :"/>
+            android:text="Size& Price :"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
