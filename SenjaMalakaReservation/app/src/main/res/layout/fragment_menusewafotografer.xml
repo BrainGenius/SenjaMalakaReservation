@@ -5,29 +5,44 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_marginBottom="15dp"
         android:id="@+id/cameraTypeLabelTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih paket fotografer lensa tertentu:"
-        android:layout_marginTop="8dp"/>
+        android:layout_gravity="center_horizontal"
+        android:text="PILIH PAKET FOTOGRAFER ATAU LENSA:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
 
     <RadioGroup
-        android:id="@+id/cameraTypeRadioGroup1"
+        android:id="@+id/shapeRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/radioButtonFotografer1"
-            android:layout_width="372dp"
+            android:id="@+id/shapeRound"
+            android:layout_width="387dp"
             android:layout_height="wrap_content"
             android:text="Fotografer 1 Lensa High" />
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fotografer1" />
+
         <RadioButton
             android:id="@+id/radioButtonFotografer2"
-            android:layout_width="369dp"
+            android:layout_width="387dp"
             android:layout_height="wrap_content"
             android:text="Fotografer 2 Lensa Medium" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fotografer2" />
 
     </RadioGroup>
 
@@ -39,17 +54,21 @@
 
     <EditText
         android:id="@+id/etDurasi"
-        android:layout_width="383dp"
+        android:layout_width="387dp"
         android:layout_height="wrap_content"
         android:hint="Durasi (jam)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_marginBottom="15dp"/>
 
     <TextView
         android:id="@+id/cameraTypeLabelTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Kamera tanpa Fotografer:"
-        android:layout_marginTop="8dp"/>
+        android:layout_gravity="center_horizontal"
+        android:text="PILIH CAMERA TANPA FOTOGRAFER:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"/>
 
     <RadioGroup
         android:id="@+id/cameraTypeRadioGroup2"
@@ -61,31 +80,26 @@
             android:id="@+id/radio_dslr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DSLR"/>
+            android:text="DSLR" />
 
         <RadioButton
             android:id="@+id/radio_mirrorless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mirrorless"/>
+            android:text="Mirrorless" />
 
         <RadioButton
             android:id="@+id/radio_action_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Action Camera"/>
+            android:text="Action Camera" />
 
         <RadioButton
             android:id="@+id/radio_drone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drone"/>
+            android:text="Drone" />
 
-        <RadioButton
-            android:id="@+id/radio_instant_camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Instant Camera"/>
 
         <TextView
             android:id="@+id/tvBiaya"
@@ -118,8 +132,8 @@
                 android:text="Sewa" />
 
             <Button
-                android:id="@+id/Batal"
-                android:layout_width="199dp"
+                android:id="@+id/btnBatal"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:text="Batal" />
 
