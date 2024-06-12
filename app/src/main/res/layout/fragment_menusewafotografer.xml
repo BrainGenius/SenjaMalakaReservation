@@ -1,14 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_SewaFotograferFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Sewa Fotografer" />
+        android:id="@+id/cameraTypeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih paket fotografer lensa tertentu:"
+        android:layout_marginTop="8dp"/>
 
-</FrameLayout>
+    <RadioGroup
+        android:id="@+id/cameraTypeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RadioButton
+            android:id="@+id/radioButtonFotografer1"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:text="Fotografer 1 Lensa High" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFotografer2"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:text="Fotografer 2 Lensa Medium" />
+
+
+
+
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/etTanggal"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal" />
+
+    <EditText
+        android:id="@+id/etDurasi"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:hint="Durasi (jam)"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/cameraTypeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Kamera tanpa Fotografer:"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/cameraTypeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_dslr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DSLR"/>
+
+        <RadioButton
+            android:id="@+id/radio_mirrorless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mirrorless"/>
+
+        <RadioButton
+            android:id="@+id/radio_action_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Action Camera"/>
+
+        <RadioButton
+            android:id="@+id/radio_drone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drone"/>
+
+        <RadioButton
+            android:id="@+id/radio_instant_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instant Camera"/>
+
+    <TextView
+        android:id="@+id/tvBiaya"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_below="@id/tvDurasi"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Total Biaya : "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBiaya"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Bayar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSewa"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Sewa" />
+
+        <Button
+            android:id="@+id/Batal"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:text="Batal" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvKonfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
