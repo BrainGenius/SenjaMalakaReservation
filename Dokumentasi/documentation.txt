@@ -1,0 +1,4 @@
+update_mainactivity		: andharu
+update_pemesanan		: andharu
+update_sewafotografer		: bima
+update_sewabeanbag		: bella
