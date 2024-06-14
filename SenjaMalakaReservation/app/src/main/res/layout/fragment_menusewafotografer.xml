@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:id="@+id/cameraTypeLabelTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,40 +25,41 @@
         <RadioButton
             android:id="@+id/shapeRound"
             android:layout_width="387dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Fotografer 1 Lensa High" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/fotografer1" />
+            android:src="@drawable/fotografer1"
+            android:layout_marginStart="25dp"/>
 
         <RadioButton
             android:id="@+id/radioButtonFotografer2"
             android:layout_width="387dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:text="Fotografer 2 Lensa Medium" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/fotografer2" />
+            android:src="@drawable/fotografer2"
+            android:layout_marginStart="25dp"/>
 
     </RadioGroup>
 
     <EditText
         android:id="@+id/etTanggal"
-        android:layout_width="387dp"
+        android:layout_width="383dp"
         android:layout_height="wrap_content"
         android:hint="Tanggal" />
 
     <EditText
         android:id="@+id/etDurasi"
-        android:layout_width="387dp"
+        android:layout_width="383dp"
         android:layout_height="wrap_content"
         android:hint="Durasi (jam)"
-        android:inputType="number"
-        android:layout_marginBottom="15dp"/>
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/cameraTypeLabelTextView2"
@@ -101,24 +102,6 @@
             android:text="Drone" />
 
 
-        <TextView
-            android:id="@+id/tvBiaya"
-            android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Total Biaya : "
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnBayar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvBiaya"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
-            android:text="Bayar" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,7 +112,7 @@
                 android:id="@+id/btnSewa"
                 android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:text="Sewa" />
+                android:text="Checkout" />
 
             <Button
                 android:id="@+id/btnBatal"
