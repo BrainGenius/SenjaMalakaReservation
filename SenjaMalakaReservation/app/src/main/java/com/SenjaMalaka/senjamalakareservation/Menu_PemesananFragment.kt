@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
@@ -47,6 +49,22 @@ class Menu_PemesananFragment : Fragment() {
             makananView?.findViewById<TextView>(R.id.Pesanan_NamaMakanan)?.text = makanan.first
             makananView?.findViewById<TextView>(R.id.Pesanan_HargaMakanan)?.text = makanan.second
             makananView?.findViewById<TextView>(R.id.Pesanan_DeskripsiMakanan)?.text = makanan.third
+
+            val jumlahEditText = makananView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val tambahButton = makananView?.findViewById<ImageButton>(R.id.Button_TambahMakanan)
+            val kurangiButton = makananView?.findViewById<ImageButton>(R.id.Button_KurangiMakanan)
+
+            tambahButton?.setOnClickListener {
+                val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+                jumlahEditText?.setText((currentValue + 1).toString())
+            }
+
+            kurangiButton?.setOnClickListener {
+                val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+                if (currentValue > 0) {
+                    jumlahEditText?.setText((currentValue - 1).toString())
+                }
+            }
         }
 
         // Populate minuman
@@ -55,6 +73,22 @@ class Menu_PemesananFragment : Fragment() {
             minumanView?.findViewById<TextView>(R.id.Pesanan_NamaMinuman)?.text = minuman.first
             minumanView?.findViewById<TextView>(R.id.Pesanan_HargaMinuman)?.text = minuman.second
             minumanView?.findViewById<TextView>(R.id.Pesanan_DeskripsiMinuman)?.text = minuman.third
+
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val tambahButton = minumanView?.findViewById<ImageButton>(R.id.Button_TambahMakanan)
+            val kurangiButton = minumanView?.findViewById<ImageButton>(R.id.Button_KurangiMakanan)
+
+            tambahButton?.setOnClickListener {
+                val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+                jumlahEditText?.setText((currentValue + 1).toString())
+            }
+
+            kurangiButton?.setOnClickListener {
+                val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+                if (currentValue > 0) {
+                    jumlahEditText?.setText((currentValue - 1).toString())
+                }
+            }
         }
 
         return view
