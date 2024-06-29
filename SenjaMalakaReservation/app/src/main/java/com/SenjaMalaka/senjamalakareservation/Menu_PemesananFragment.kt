@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -15,6 +16,7 @@ private const val ARG_PARAM2 = "param2"
 class Menu_PemesananFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var buttonTotalHarga: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,14 @@ class Menu_PemesananFragment : Fragment() {
             Triple("Jus Jeruk", "Rp. 8.000", "Jus jeruk segar")
         )
 
+        buttonTotalHarga = view.findViewById(R.id.button_total_harga)
+        buttonTotalHarga.setOnClickListener {
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.Menu_Fragment, Menu_PemesananPaymentFragment())
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
+
         // Populate makanan
         makananList.forEachIndexed { index, makanan ->
             val makananView = view.findViewById<View>(resources.getIdentifier("makanan_$index", "id", context?.packageName))
@@ -57,12 +67,14 @@ class Menu_PemesananFragment : Fragment() {
             tambahButton?.setOnClickListener {
                 val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
                 jumlahEditText?.setText((currentValue + 1).toString())
+                updateTotalPrice()
             }
 
             kurangiButton?.setOnClickListener {
                 val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
                 if (currentValue > 0) {
                     jumlahEditText?.setText((currentValue - 1).toString())
+                    updateTotalPrice()
                 }
             }
         }
@@ -81,17 +93,41 @@ class Menu_PemesananFragment : Fragment() {
             tambahButton?.setOnClickListener {
                 val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
                 jumlahEditText?.setText((currentValue + 1).toString())
+                updateTotalPrice()
             }
 
             kurangiButton?.setOnClickListener {
                 val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
                 if (currentValue > 0) {
                     jumlahEditText?.setText((currentValue - 1).toString())
+                    updateTotalPrice()
                 }
             }
         }
 
         return view
+    }
+
+    private fun updateTotalPrice() {
+        var totalPrice = 0
+        val makananPrices = listOf(15000, 12000, 20000)
+        val minumanPrices = listOf(5000, 10000, 8000)
+
+        for (i in makananPrices.indices) {
+            val makananView = view?.findViewById<View>(resources.getIdentifier("makanan_$i", "id", context?.packageName))
+            val jumlahEditText = makananView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            totalPrice += quantity * makananPrices[i]
+        }
+
+        for (i in minumanPrices.indices) {
+            val minumanView = view?.findViewById<View>(resources.getIdentifier("minuman_$i", "id", context?.packageName))
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            totalPrice += quantity * minumanPrices[i]
+        }
+
+        buttonTotalHarga.text = "Total Harga: Rp. $totalPrice"
     }
 
     companion object {
