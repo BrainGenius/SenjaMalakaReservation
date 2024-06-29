@@ -86,9 +86,9 @@ class Menu_PemesananFragment : Fragment() {
             minumanView?.findViewById<TextView>(R.id.Pesanan_HargaMinuman)?.text = minuman.second
             minumanView?.findViewById<TextView>(R.id.Pesanan_DeskripsiMinuman)?.text = minuman.third
 
-            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
-            val tambahButton = minumanView?.findViewById<ImageButton>(R.id.Button_TambahMakanan)
-            val kurangiButton = minumanView?.findViewById<ImageButton>(R.id.Button_KurangiMakanan)
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMinuman)
+            val tambahButton = minumanView?.findViewById<ImageButton>(R.id.Button_TambahMinuman)
+            val kurangiButton = minumanView?.findViewById<ImageButton>(R.id.Button_KurangiMinuman)
 
             tambahButton?.setOnClickListener {
                 val currentValue = jumlahEditText?.text.toString().toIntOrNull() ?: 0
@@ -122,7 +122,7 @@ class Menu_PemesananFragment : Fragment() {
 
         for (i in minumanPrices.indices) {
             val minumanView = view?.findViewById<View>(resources.getIdentifier("minuman_$i", "id", context?.packageName))
-            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMinuman)
             val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
             totalPrice += quantity * minumanPrices[i]
         }
