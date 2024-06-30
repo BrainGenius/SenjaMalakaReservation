@@ -1,31 +1,24 @@
 package com.SenjaMalaka.senjamalakareservation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_ORDER_SUMMARY = "order_summary"
+private const val ARG_TOTAL_PRICE = "total_price"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Menu_PemesananPaymentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Menu_PemesananPaymentFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var orderSummary: String? = null
+    private var totalPrice: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            orderSummary = it.getString(ARG_ORDER_SUMMARY)
+            totalPrice = it.getInt(ARG_TOTAL_PRICE)
         }
     }
 
@@ -33,26 +26,32 @@ class Menu_PemesananPaymentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_pemesanan_payment, container, false)
+        val view = inflater.inflate(R.layout.fragment_menupemesanan_payment, container, false)
+
+        val tvOrderSummary = view.findViewById<TextView>(R.id.tv_order_summary)
+        val llOrderItems = view.findViewById<ViewGroup>(R.id.ll_order_items)
+        val tvTotalPrice = view.findViewById<TextView>(R.id.tv_total_price)
+
+        // Populate order summary
+        orderSummary?.split("\n")?.forEach { item ->
+            val textView = TextView(context)
+            textView.text = item
+            llOrderItems.addView(textView)
+        }
+
+        // Populate total price
+        tvTotalPrice.text = "Total Price: Rp. $totalPrice"
+
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Menu_PemesananPaymentFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(orderSummary: String, totalPrice: Int) =
             Menu_PemesananPaymentFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(ARG_ORDER_SUMMARY, orderSummary)
+                    putInt(ARG_TOTAL_PRICE, totalPrice)
                 }
             }
     }

@@ -47,8 +47,9 @@ class Menu_PemesananFragment : Fragment() {
 
         buttonTotalHarga = view.findViewById(R.id.button_total_harga)
         buttonTotalHarga.setOnClickListener {
+            val fragment = Menu_PemesananPaymentFragment.newInstance(getOrderSummary(), getTotalPrice())
             val fragmentTransaction = parentFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.Menu_Fragment, Menu_PemesananPaymentFragment())
+            fragmentTransaction.replace(R.id.Menu_Fragment, fragment)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
@@ -128,6 +129,57 @@ class Menu_PemesananFragment : Fragment() {
         }
 
         buttonTotalHarga.text = "Total Harga: Rp. $totalPrice"
+    }
+
+    private fun getOrderSummary(): String {
+        val makananList = listOf("Nasi Goreng", "Mie Goreng", "Ayam Goreng")
+        val makananPrices = listOf(15000, 12000, 20000)
+        val minumanList = listOf("Es Teh", "Kopi", "Jus Jeruk")
+        val minumanPrices = listOf(5000, 10000, 8000)
+
+        val stringBuilder = StringBuilder()
+
+        for (i in makananList.indices) {
+            val makananView = view?.findViewById<View>(resources.getIdentifier("makanan_$i", "id", context?.packageName))
+            val jumlahEditText = makananView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            if (quantity > 0) {
+                stringBuilder.append("${makananList[i]} x $quantity @ ${makananPrices[i]}\n")
+            }
+        }
+
+        for (i in minumanList.indices) {
+            val minumanView = view?.findViewById<View>(resources.getIdentifier("minuman_$i", "id", context?.packageName))
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMinuman)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            if (quantity > 0) {
+                stringBuilder.append("${minumanList[i]} x $quantity @ ${minumanPrices[i]}\n")
+            }
+        }
+
+        return stringBuilder.toString()
+    }
+
+    private fun getTotalPrice(): Int {
+        var totalPrice = 0
+        val makananPrices = listOf(15000, 12000, 20000)
+        val minumanPrices = listOf(5000, 10000, 8000)
+
+        for (i in makananPrices.indices) {
+            val makananView = view?.findViewById<View>(resources.getIdentifier("makanan_$i", "id", context?.packageName))
+            val jumlahEditText = makananView?.findViewById<EditText>(R.id.EditText_JumlahMakanan)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            totalPrice += quantity * makananPrices[i]
+        }
+
+        for (i in minumanPrices.indices) {
+            val minumanView = view?.findViewById<View>(resources.getIdentifier("minuman_$i", "id", context?.packageName))
+            val jumlahEditText = minumanView?.findViewById<EditText>(R.id.EditText_JumlahMinuman)
+            val quantity = jumlahEditText?.text.toString().toIntOrNull() ?: 0
+            totalPrice += quantity * minumanPrices[i]
+        }
+
+        return totalPrice
     }
 
     companion object {
